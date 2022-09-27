@@ -1,0 +1,121 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>Add Course</title>
+         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Rancho&effect=shadow-multiple">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Rancho&effect=shadow-multiple|3d">
+   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Rancho&effect=shadow-multiple|3d-float">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Rancho&effect=shadow-multiple|fire-animation">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Rancho&effect=shadow-multiple|shadow-multiple">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Rancho&effect=shadow-multiple|emboss">
+  
+  <script>
+      function demo(){
+    alert ( "Course Added Successfully" );
+    return true;
+            }
+            function demo2(){
+    alert ( "Course Updated Successfully" );
+    return true;
+            }
+             function demo3(){
+    alert ( "Course Deleted Successfully" );
+    return true;
+            }
+      </script>
+     
+        <style>
+            .column {
+  float: left;
+  width: 50%;
+}
+            </style>
+    </head>
+     <body style="background-image: url('https://cdn.pixabay.com/photo/2016/05/05/02/37/sunset-1373171__480.jpg');
+          background-repeat: no-repeat;background-size: cover; "> 
+        <nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand font-effect-fire-animation" href="#" style="font-weight: bold;">Study Management</a>
+    </div>
+    <ul class="nav navbar-nav">
+      <li class="active"><a href="index.html">Home</a></li>
+      <li><a href="prev_courses.jsp">View Courses </a>
+     
+      <li><a href="exams.jsp">Exams</a></li>
+    </ul>
+   
+  </div>
+    </nav>
+        <section>
+         <div class="signin-form">
+             <form action="crudc.jsp" method="POST">
+                 <section class="sign-in" style="background-repeat: no-repeat; color:white; opacity: 0.9;font-size: 15px;font-weight:bold;
+           background-image: url('data:image/jpeg;base64,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');
+           background-size: 570px 650px; width:400px; position: absolute; right: 50%; left:35%;top:10%; padding-left:20px;padding-right: 20px;">
+                        <h3 class="form-title" style="color: white;">Add Course</h3>  
+                            <div class="form-group">
+                                
+                                <input type="text" name="cname" placeholder="Add Course Name" style="color:black;"/>
+                            </div>
+                        <div class="row" style="margin-left:5px;">
+                            <div class="column">
+                                <label> Platform</label>
+                                <div><input type="radio" name="cstr" value="nptel"/>NPTEL</div> 
+                              <div>  <input type="radio" name="cstr" value="coursera"/>Coursera </div>
+                                <div><input type="radio" name="cstr" value="udemy"/> Udemy </div>
+                               <div>Other Platform <input type="text" name="cstr" value="otherplatform" style="width:70px;color:black;"/></div>
+                            </div>
+                         <div class="column">
+                                <label>Why to Study this?</label>
+                               <div> <input type="radio" name="yst" value="cllg"/> For Certificate</div>
+                               <div><input type="radio" name="yst" value="work"/> To Learn the concept </div>
+                               <div>  <input type="radio" name="yst" value="interest"/>For Credits</div>
+                               <div>  <input type="radio" name="yst" value="All"/>All of the above</div>
+                         </div>
+                        </div>
+                        <br>
+                        
+                        <div class="form-group">
+                                <label>Time required to Study (Per day)</label>
+                                <input type="text" name="hrs" style="color:black;"/> days/hrs
+                               
+                         </div>
+                       
+                        <div class="form-group">
+                                <label>Any Other Remark related to course?</label>
+                                <input type="text" name="remark" style="color:black;">
+                               
+                        </div>
+                        
+                           
+                              <div class="form-group shadow-textarea">
+  <label for="exampleFormControlTextarea6">What you "actually learnt" from this course?</label>
+  <br> <textarea class="form-control z-depth-1" name="actl" id="exampleFormControlTextarea6" rows="3" placeholder="Write something here..." style="color:black;"></textarea>
+</div>   
+                          <div class="form-group form-button">
+                             
+                                 <input type="submit" name="addcourse" class="btn btn-success btn-sm" value="Add"
+                               style="margin-left:20px; padding:5px 20px; border-radius: 4px;"
+                               onclick='return demo();'/>
+                                <input type="submit" name="updatecourse" class="btn btn-success btn-sm"
+                                value="Update"  style="padding:5px 20px; border-radius: 4px; "
+                                 onclick='return demo2();'/>
+                                 <input type="submit" name="deletecourse" class="btn btn-success btn-sm"
+                                value="Delete"  style="padding:5px 20px; border-radius: 4px;"
+                                 onclick='return demo3();'/>
+                               
+                            </div>
+                 </section>
+             </form>
+             
+</div>
+       
+        </section>
+    </body>
+</html>

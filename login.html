@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Login</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link rel="stylesheet" href="css/fonts/material-icon/css/material-design-iconic-font.min.css">
+
+    <!-- Main css -->
+    <link rel="stylesheet" href="css/css/style.css">
+    <style>
+        
+        .container {
+             width: 900px;
+             height:500px;
+             margin-top:40px;
+        }
+        .main {
+         background: #f8f8f8;
+         padding: 10px 0; 
+          margin-top:40px;
+        }
+        body{
+            height:380px;
+        }
+      
+        </style>
+        <script>
+function demo(){
+if (document.f.name.value == ""){
+alert ( "Please enter the User ID." );
+document.loginform.userID.focus();
+return false;
+}
+if (document.f.pass1.value == ""){
+alert ( "Please enter the password." );
+document.userform.password.focus();
+return false;
+}
+if(document.f.pass1!=f.pass2){
+    alert("Entered password and retentered password doesn't match");
+}
+alert ( "Welcome "+f.name+" Thanks for login" );
+return true;
+}
+
+</script>
+    </head>
+    <body>
+        <div class="main">
+             <div class="container">
+        <form action="login.jsp" method="POST" onsubmit="return demo();" >
+        <section class="sign-in" style="margin-top:-70px;">
+            <div class="signin-content" >
+                    <div class="signin-image">
+                        <figure><img src="signin-image.jpg" alt="sing up image" style="margin-top:-10px; height:330px;"></figure>
+                       
+                    </div>
+             
+
+                    <div class="signin-form" style="margin-top:-40px;">
+                        <h2 class="form-title" style="color: #6082B6;">Login(Yayy!)</h2>
+                        <form method="POST" class="register-form" id="login-form">
+                            <div class="form-group ">
+                                <label for="your_name"><i class="zmdi zmdi-account material-icons-name"></i></label>
+                                <input type="text" name="name" id="name" placeholder="Your Name"/>
+                            </div>
+                            <div class="form-group" >
+                                <label for="your_pass"><i class="zmdi zmdi-lock"></i></label>
+                                <input type="password" name="pass1" id="pass" placeholder="Password"/>
+                            </div>
+                             <div class="form-group">
+                                <label for="your_pass"><i class="zmdi zmdi-lock"></i></label>
+                                <input type="password" name="pass2" id="pass2" placeholder="Retype Password"/>
+                            </div>
+                            <div class="form-group">
+                                <input type="checkbox" name="remember-me" id="remember-me" class="agree-term" />
+                                <label for="remember-me" class="label-agree-term"><span><span></span></span>Remember me</label>
+                            </div>
+                            <div class="form-group form-button">
+                                <input type="submit" name="signin" id="signin" class="form-submit" value="Log in"/>
+                                 <a href="signup.html" class="signup-image-link" style="margin-top:20px; margin-right:150px;" >Create an account</a>
+                            </div>
+                        
+                      
+                    </div>
+                </div>
+           
+        </section>
+            </form>
+                        </div>
+             </div>
+        <footer style="margin-top:5px; text-align: center;">
+            Created by Charu Saraswat
+        </footer>
+         <!-- JS -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="css/js/main.js"></script>
+    </body>
+</html>
