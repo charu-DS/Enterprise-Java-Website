@@ -12,9 +12,14 @@ It includes:-
 
 Note:This website is made using netbeans.
 For proper functioning of the site, kindly create a database, and change the address of the database in the respective files, wherever it is mentioned).
+
 Also, change the name of the classes to the name of your project or 
 [Recommended] Copy Paste the code from try-catch block.
+
 This website should not be seen as a final year project.
+
 Hope it helps!
+
 For any queries
+
 contact: lakshitasaraswat18@gmail.com
